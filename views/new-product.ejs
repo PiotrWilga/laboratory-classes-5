@@ -5,8 +5,11 @@
   </head>
   <body>
     <main>
-      <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath:
-      activeLinkPath }); %>
+      <%- include('partials/navigation', {
+        menuLinks: menuLinks,
+        activeLinkPath: activeLinkPath,
+        cartCount: cartCount
+      }) %>
       <h1 class="heading">Newest product</h1>
       <% if (newestProduct?.name) { %>
       <br />
@@ -17,7 +20,7 @@
       <% } else { %>
       <br />
       <div>No new products available.</div>
-      <% }%>
+      <% } %>
     </main>
   </body>
 </html>

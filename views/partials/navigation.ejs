@@ -14,13 +14,14 @@
     <% } %>
 
     <li class="navigation__item navigation__cart">
-      Cart
-      <img
-        alt="Cart"
-        class="navigation__cart"
-        src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/shopping-cart.svg"
-      />
-      <span class="navigation__badge"><%= cartCount %></span>
+      <a class="navigation__link" href="/cart">
+        <img
+          alt="Cart"
+          class="navigation__cart-icon"
+          src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/shopping-cart.svg"
+        />
+        <span class="navigation__badge"><%= cartCount || 0 %></span>
+      </a>
     </li>
   </ul>
 </nav>
