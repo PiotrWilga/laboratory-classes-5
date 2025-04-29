@@ -48,6 +48,10 @@ exports.getProductView = (request, response) => {
   const product = Product.findByName(name);
   const cartCount = Cart.getProductsQuantity();
 
+  if (!product) {
+    return response.redirect("/products");
+  }
+
   response.render("product.ejs", {
     headTitle: "Shop - Product",
     path: `/products/${name}`,
